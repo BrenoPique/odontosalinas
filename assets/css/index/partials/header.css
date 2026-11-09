@@ -32,6 +32,10 @@ nav ul li a:hover {
   transition: 0.4s;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   nav ul {
     margin-left: 10rem;

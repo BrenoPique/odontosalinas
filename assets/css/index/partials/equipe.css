@@ -70,7 +70,7 @@
   margin: 0 5px;
   cursor: pointer;
 }
-d
+
 .dot.active {
   background-color: var(--verde_azulado);
 }
