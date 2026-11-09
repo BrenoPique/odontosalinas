@@ -1,0 +1,102 @@
+@import url('../global/global.css');
+@import url('partials/equipe.css');
+@import url('partials/hero.css');
+@import url('partials/servicos.css');
+@import url('partials/contato.css');
+@import url('partials/localizacao.css');
+@import url('partials/horarios.css');
+@import url('partials/header.css');
+
+a {
+    text-decoration: none;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Botão de voltar ao topo */
+#btn-scroll-top {
+    position: fixed;
+    bottom: 11rem;
+    right: 3rem;
+    background-color: var(--verde_azulado);
+    border: none;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 6rem;
+    display: none;
+}
+
+/* botão do whatsapp */
+#whatsapp {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color: var(--verde_claro);
+    border: none;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* Animação de pulsação */
+    animation: pulse-animation 2s infinite;
+}
+
+#whatsapp:hover {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6); /* Brilho neon */
+    background-color: #000;
+}
+
+@keyframes pulse-animation {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+#whatsapp svg {
+    fill: white;
+    width: 4rem;
+    height: 4rem;
+    transition: transform 0.3s ease;
+}
+
+#whatsapp:hover svg {
+    transform: scale(1.1);
+}
+
+
+
+@media (max-width:840px) {
+
+  html {
+    font-size: 50.5%;
+    scroll-behavior: smooth;
+  }
+
+  #btn-scroll-top {
+    width: 6rem;
+    height: 6rem;
+    bottom: 10rem;
+  }
+
+  #whatsapp {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  #whatsapp svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+}

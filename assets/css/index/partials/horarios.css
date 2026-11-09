@@ -1,0 +1,83 @@
+
+#horarios {
+  background-color: #e4e4e4;
+
+  background-image: url("../../../img/mosaic.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.overlay-horarios {
+  padding: 8rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#horarios .container {
+  max-width: 90rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-horarios {
+  display: flex;
+  max-width: 70rem; /* Largura máxima da tabela de horários */
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar do fundo */
+}
+
+.coluna-horario {
+  flex: 1; /* Faz com que ambas as colunas tenham 50% da largura */
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho-horario {
+  padding: 2.5rem 2rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-teal-dark {
+  background-color: #1eb9a9;
+}
+
+.bg-teal-light {
+  background-color: #21c4b5;
+}
+
+.icone-relogio {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.cabecalho-horario h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.corpo-horario {
+  background-color: #ffffff;
+  padding: 2rem 4rem;
+  height: 100%; /* Garante que estique até o final */
+}
+
+.borda-direita {
+  border-right: 1px solid #f0f0f0; /* Separador vertical entre as colunas */
+}
+
+.linha-horario {
+  padding: 2rem 0;
+  color: #444444;
+  font-size: 1.9rem;
+}
+
+.borda-inferior {
+  border-bottom: 1px solid #f0f0f0; /* Separador horizontal entre as linhas de horário */
+}

@@ -1,0 +1,72 @@
+
+#servicos {
+  padding: 8rem 2rem;
+  background-color: #f4f4f4;
+}
+
+#servicos .container {
+  max-width: 110rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo {
+  color: var(--verde_azulado);
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6rem;
+}
+
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+
+.card-servico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#servicos svg {
+  display: block;
+  fill: var(--verde_azulado);
+  height: 4.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-servico h3 {
+  color: var(--cinza);
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.card-servico ul {
+  list-style: none;
+}
+
+.card-servico li {
+  color: var(--cinza_claro);
+  font-size: 1.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@media (max-width:840px) {
+
+  .grid-servicos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 670px) {
+
+  .grid-servicos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

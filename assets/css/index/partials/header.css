@@ -1,0 +1,126 @@
+header {
+  width: 100%;
+  height: 13rem;
+  position: absolute;
+  z-index: 1;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  align-items: center;
+  gap: 5rem;
+  margin-left: 40rem;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+nav ul li a:hover {
+  color: var(--verde_claro);
+  transition: 0.4s;
+}
+
+@media (max-width: 1300px) {
+  nav ul {
+    margin-left: 10rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav ul {
+    margin-left: 0;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2000; /*Mantém o botão X acima do menu tela cheia*/
+  }
+
+  nav {
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  /* 3 barras do menu hamburguer*/
+  .menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* ANIMAÇÃO PARA O 'X' (Ativada pelo JavaScript) */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Esconde a barra do meio */
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+  }
+
+  /* MENU APARECE */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed trava o menu na tela inteira */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.95
+    ); /* Fundo quase sólido para leitura clara */
+    padding: 0;
+    gap: 3rem; /* Espaçamento confortável para o dedo (mobile) */
+    z-index: 1500; /* Fica abaixo do botão 'X', mas acima do site */
+
+    /* Animação de entrada deslizando da direita */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  /* Classe que o JS vai adicionar para mostrar o menu */
+  .nav-links.active {
+    transform: translateX(0%);
+  }
+
+  /* Estilizando os links para tela cheia */
+  .nav-links a {
+    font-size: 1.8rem; /* Letra maior em tela cheia */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--verde_claro);
+  }
+}
