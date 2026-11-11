@@ -1,0 +1,25 @@
+/* ================= CHAMADA FINAL ================= */
+
+.final-cta {
+  padding: 80px 0;
+  background: var(--teal-900);
+  color: #fff;
+  text-align: center;
+}
+
+.final-cta h2 {
+  font: 500 clamp(2rem, 4vw, 3rem)/1.15 var(--font-display);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-cta p {
+  max-width: 650px;
+  margin: 1rem auto 1.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.final-cta .btn {
+  background: var(--wa);
+  color: #053b1b;
+}

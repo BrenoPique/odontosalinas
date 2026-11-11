@@ -1,0 +1,95 @@
+/* ---------- Serviços ---------- */
+#servicos {
+  background: linear-gradient(180deg, var(--teal-50), var(--sand));
+}
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.card-servico {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2.1rem 1.9rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s,
+    border-color 0.35s;
+}
+.card-servico::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--teal-600), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+.card-servico:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+.card-servico:hover::before {
+  transform: scaleX(1);
+}
+.icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: var(--teal-100);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.3rem;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.icon-wrap svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--teal-700);
+  transition: fill 0.3s;
+}
+.card-servico:hover .icon-wrap {
+  background: var(--teal-700);
+  transform: rotate(-6deg);
+}
+.card-servico:hover .icon-wrap svg {
+  fill: #fff;
+}
+.card-servico h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 1.25;
+  color: var(--teal-800);
+  margin-bottom: 1rem;
+}
+.card-servico li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 0.38rem 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+.card-servico li::before {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--teal-500);
+  margin-top: 0.6rem;
+}
+.servicos-cta {
+  text-align: center;
+  margin-top: 3rem;
+}

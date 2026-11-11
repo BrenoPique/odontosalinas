@@ -1,0 +1,46 @@
+/* ---------- Como agendar ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  counter-reset: s;
+}
+.step {
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+.step::before {
+  counter-increment: s;
+  content: counter(s);
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  background: var(--teal-700);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  box-shadow: 0 0 0 8px var(--teal-100);
+}
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: calc(50% + 52px);
+  width: calc(100% - 104px);
+  border-top: 2px dashed var(--teal-500);
+  opacity: 0.5;
+}
+.step h3 {
+  font-family: var(--font-display);
+  color: var(--teal-800);
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+.step p {
+  color: var(--muted);
+  font-size: 0.96rem;
+}

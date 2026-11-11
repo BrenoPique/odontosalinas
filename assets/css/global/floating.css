@@ -1,0 +1,72 @@
+/* ---------- Flutuantes ---------- */
+#whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--wa);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 26px -6px rgba(37, 211, 102, 0.8);
+  transition: transform 0.25s;
+}
+#whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--wa);
+  animation: ring 2.2s infinite;
+  z-index: -1;
+}
+@keyframes ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+#whatsapp:hover {
+  transform: scale(1.1);
+}
+#whatsapp svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+#btn-scroll-top {
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  z-index: 90;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--teal-700);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+#btn-scroll-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+#btn-scroll-top:hover {
+  background: var(--teal-600);
+}
+#btn-scroll-top svg {
+  width: 22px;
+  height: 22px;
+}

@@ -1,0 +1,49 @@
+/* ---------- CTA final ---------- */
+.cta-final {
+  padding: 0 0 6rem;
+  background: var(--teal-50);
+}
+.cta-box {
+  background: linear-gradient(135deg, var(--teal-700), var(--teal-900));
+  color: #fff;
+  border-radius: 28px;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.cta-box::before,
+.cta-box::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+.cta-box::before {
+  width: 300px;
+  height: 300px;
+  left: -90px;
+  top: -120px;
+}
+.cta-box::after {
+  width: 220px;
+  height: 220px;
+  right: -60px;
+  bottom: -90px;
+}
+.cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.6vw, 2.7rem);
+  line-height: 1.15;
+  position: relative;
+}
+.cta-box p {
+  position: relative;
+  margin: 1rem auto 2rem;
+  max-width: 48ch;
+  color: rgba(255, 255, 255, 0.85);
+}
+.cta-box .btn {
+  position: relative;
+}

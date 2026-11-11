@@ -1,0 +1,112 @@
+/* ================= TABLETS E TELAS MENORES ================= */
+
+@media (max-width: 900px) {
+  .foot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MENU MOBILE ================= */
+
+@media (max-width: 860px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  header.scrolled {
+    backdrop-filter: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(320px, 82vw);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--teal-900);
+    transform: translateX(100%);
+    transition: transform 0.35s;
+    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.open {
+    transform: none;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 120;
+  }
+}
+
+/* ================= CELULARES ================= */
+
+@media (max-width: 700px) {
+  .page-hero {
+    padding: 130px 0 65px;
+  }
+
+  .intro {
+    padding: 55px 0 25px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-section {
+    padding: 48px 0;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 1.45rem;
+  }
+
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.2rem;
+  }
+
+  .foot-brand {
+    grid-column: 1/-1;
+  }
+}
+
+/* ================= CELULARES PEQUENOS ================= */
+
+@media (max-width: 430px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .foot-brand {
+    grid-column: auto;
+  }
+
+  .foot-bottom {
+    flex-direction: column;
+  }
+}
+
+/* ================= ACESSIBILIDADE ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

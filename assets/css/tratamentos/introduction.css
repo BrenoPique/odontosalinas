@@ -1,0 +1,61 @@
+/* ================= INTRODUÇÃO ================= */
+
+.intro {
+  padding: 76px 0 38px;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ================= QUADRO INFORMATIVO ================= */
+
+.intro-note {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.intro-note strong {
+  display: block;
+  color: var(--teal-800);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-note p {
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+/* ================= NAVEGAÇÃO RÁPIDA ================= */
+
+.quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 2rem;
+}
+
+.quick-nav a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal-800);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.quick-nav a:hover {
+  background: var(--teal-700);
+  border-color: var(--teal-700);
+  color: #fff;
+}

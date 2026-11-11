@@ -1,0 +1,66 @@
+@import '../global/global.css';
+@import url("./hero.css");
+@import url("./introduction.css");
+@import url("./services.css");
+@import url("./cta.css");
+@import url("./responsividade.css");
+
+/* ================= COMPONENTES GERAIS ================= */
+
+.eyebrow {
+  display: inline-block;
+  color: var(--teal-600);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.titulo {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.08;
+  color: var(--teal-900);
+  font-weight: 500;
+}
+
+.subtitulo {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/* ================= ANIMAÇÕES ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s,
+    transform 0.65s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

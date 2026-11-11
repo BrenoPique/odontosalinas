@@ -1,0 +1,56 @@
+/* ================= HERO ================= */
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 160px 0 88px;
+  background: linear-gradient(135deg, var(--teal-900), var(--teal-700));
+  color: #fff;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  right: -110px;
+  top: 30px;
+  box-shadow:
+    0 0 0 55px rgba(255, 255, 255, 0.035),
+    0 0 0 110px rgba(255, 255, 255, 0.025);
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero .eyebrow {
+  color: var(--gold);
+}
+
+.page-hero h1 {
+  font: 500 clamp(2.5rem, 6vw, 4.4rem)/1.08 var(--font-display);
+  max-width: 800px;
+}
+
+.page-hero p {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.08rem;
+  margin-top: 1.2rem;
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb a {
+  color: #fff;
+}
