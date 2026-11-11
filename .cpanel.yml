@@ -2,4 +2,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/wwwodontosalinas/public_html
     - /bin/cp -f index.html $DEPLOYPATH/
+    - /bin/cp -f tratamentos.html $DEPLOYPATH/
     - /bin/cp -R assets $DEPLOYPATH/
